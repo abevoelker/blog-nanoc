@@ -1,0 +1,3 @@
+# Don't track compiled output
+output/
+tmp/
