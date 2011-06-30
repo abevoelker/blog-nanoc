@@ -10,8 +10,13 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+
+compile '*.less' do
+  filter :less
+end
+
 compile '/stylesheet/' do
-  # don’t filter or layout
+  filter :rainpress
 end
 
 compile '*' do
