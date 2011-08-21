@@ -4,6 +4,7 @@ GEM
     adsf (1.0.1)
       rack (>= 1.0.0)
     cri (2.0.2)
+    haml (3.1.2)
     kramdown (0.13.3)
     less (2.0.5)
       therubyracer (~> 0.9.2)
@@ -22,6 +23,7 @@ PLATFORMS
 
 DEPENDENCIES
   adsf (~> 1.0.1)
+  haml
   kramdown (~> 0.13.3)
   less (~> 2.0.5)
   nanoc (~> 3.1.8)

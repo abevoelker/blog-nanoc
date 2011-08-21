@@ -1,0 +1,14 @@
+!!! 5
+%html{:lang => "en"}
+  %head
+    %meta{:charset => "utf-8"}
+    %title #{@item[:title]} » Abe's Blog
+    %link{:rel => "stylesheet", :type => "text/css", :href => "/style.css", :media => "screen"}
+    %meta{:name => "generator", :content => "nanoc 3.2.1"}
+  %body
+    #main
+      =yield
+    #sidebar
+      %a{:href => '/'}
+        %img{:src => "/images/portrait.png"}
+      %h2 Abe Voelker
