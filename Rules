@@ -19,6 +19,10 @@ compile '/stylesheet/' do
   filter :rainpress
 end
 
+compile '/static/*/' do
+  # don't compile
+end
+
 compile '*' do
   filter :erb
   layout 'default'
@@ -26,6 +30,11 @@ end
 
 route '/stylesheet/' do
   '/style.css'
+end
+
+route '/static/*/' do
+  path = @item.identifier.chop.gsub(/^\/static/, '')
+  path + '.' + @item[:extension]
 end
 
 route '*' do
