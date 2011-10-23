@@ -28,6 +28,16 @@ end
 # Don't compile static files
 compile '/static/*/' do end
 
+compile '/posts/*/' do
+  filter :erb
+  filter :kramdown
+  filter :colorize_syntax,
+         :syntax => :html,
+         :default_colorizer => :pygmentize,
+         :pygmentize => { :encoding => 'utf-8' }
+  layout 'default'
+end
+
 compile '*' do
   filter :erb
   filter :colorize_syntax,
