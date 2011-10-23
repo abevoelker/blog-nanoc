@@ -42,3 +42,4 @@ route '*' do
 end
 
 layout '/default/', :haml, :format => :html5
+layout '/_google_analytics/', :erb
