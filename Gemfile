@@ -14,6 +14,7 @@ gem "mime-types", "~> 1.16"
 # CSS stuff
 gem "less", "~> 2.0.5"
 gem "rainpress", "~> 1.0"
+gem "sass", "~> 3.1.10"
 
 # Used for syntax highlighting (calling pygmentize)
 gem "systemu", "~> 2.4.0"
