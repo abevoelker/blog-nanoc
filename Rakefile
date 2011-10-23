@@ -23,7 +23,7 @@ desc 'Deploy the website to Heroku using Git.'
 task :deploy do
   prepare!
   compile!
-  Rake::Task["optimize:all"].invoke
+  #Rake::Task["optimize:all"].invoke
   deploy!
   revert!
 end
