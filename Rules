@@ -14,7 +14,7 @@ compile '/static/css/*/' do
   if @item[:extension] == 'less'
     filter :less
   end
-  #filter :rainpress
+  filter :rainpress
 end
 
 # Don't compile static files
