@@ -11,9 +11,9 @@
 #   because “*” matches zero or more characters.
 
 compile '/static/css/*/' do
-  if @item[:extension] == 'less'
-    filter :less
-  end
+  filter :less if @item[:extension] == 'less'
+  filter :sass if @item[:extension] == 'sass'
+  filter :sass, :syntax => :scss if @item[:extension] == 'scss'
   filter :rainpress
 end
 
@@ -31,7 +31,7 @@ end
 
 route '/static/*/' do
   path = @item.identifier.chop.gsub(/^\/static/, '')
-  extension = @item[:extension] == 'less' ? 'css' : @item[:extension]
+  extension = @item[:extension] =~ /less|sass|scss/ ? 'css' : @item[:extension]
   path + '.' + extension
 end
 
