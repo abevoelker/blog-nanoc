@@ -10,11 +10,19 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
+preprocess do
+  # Add a basename attribute to each item
+  items.map! {|i| i.attributes[:basename] = File.basename(i.attributes[:filename]); i}
+end
+
 compile '/static/css/*/' do
-  filter :less if @item[:extension] == 'less'
-  filter :sass if @item[:extension] == 'sass'
-  filter :sass, :syntax => :scss if @item[:extension] == 'scss'
-  filter :rainpress
+  skip = @item[:basename] =~ /^_/ # Treat files starting with _ as partials (don't route)
+  unless skip
+    filter :less if @item[:extension] == 'less'
+    filter :sass if @item[:extension] == 'sass'
+    filter :sass, :syntax => :scss if @item[:extension] == 'scss'
+    filter :rainpress
+  end
 end
 
 # Don't compile static files
@@ -29,10 +37,15 @@ compile '*' do
   layout 'default'
 end
 
+
 route '/static/*/' do
-  path = @item.identifier.chop.gsub(/^\/static/, '')
-  extension = @item[:extension] =~ /less|sass|scss/ ? 'css' : @item[:extension]
-  path + '.' + extension
+  skip = @item[:basename] =~ /^_/ # Treat files starting with _ as partials (don't route)
+  unless skip
+    path = @item.identifier.chop.gsub(/^\/static/, '')
+    path = path.gsub(/twitter-bootstrap\/bootstrap/, 'twitter-bootstrap')
+    extension = @item[:extension] =~ /less|sass|scss/ ? 'css' : @item[:extension]
+    path + '.' + extension
+  end
 end
 
 route '*' do

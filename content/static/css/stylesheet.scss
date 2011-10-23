@@ -5,12 +5,12 @@
 
 body {
   background: #fff;
-  font-family: Georgia, Palatino, Times, 'Times New Roman', sans-serif;
 }
 
 code {
   font-family: 'Consolas', 'Monaco', 'Ubuntu Mono', monospace;
   line-height: 95%;
+  background-color: transparent;
 }
 
 a {
@@ -90,6 +90,7 @@ a:hover {
   letter-spacing: 1px;
 
   line-height: 20px;
+  font-family: Georgia, Palatino, Times, 'Times New Roman', sans-serif;
 }
 
 #sidebar h3 {
@@ -97,6 +98,7 @@ a:hover {
 
   line-height: 20px;
   margin-top: 5px;
+  font-family: Georgia, Palatino, Times, 'Times New Roman', sans-serif;
 }
 
 

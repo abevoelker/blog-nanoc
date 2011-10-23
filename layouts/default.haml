@@ -3,17 +3,19 @@
   %head
     %meta{:charset => "utf-8"}
     %title #{@item[:title]} » Abe Voelker
+    %link{:rel => "stylesheet", :type => "text/css", :href => "/css/twitter-bootstrap.css", :media => "screen"}
     %link{:rel => "stylesheet", :type => "text/css", :href => "/css/stylesheet.css", :media => "screen"}
     %link{:rel => "stylesheet", :type => "text/css", :href => "/css/wombat.css", :media => "screen"}
     %link{:rel => "stylesheet", :type => "text/css", :href => "http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic", :media => "screen"}
     %meta{:name => "generator", :content => "nanoc 3.2.1"}
   %body
-    #main
-      =find_and_preserve yield #find_and_preserve fixes 'pre' indentation issues
-    #sidebar
-      %a{:href => '/'}
-        %img{:src => "/images/portrait.png"}
-      %h2 Abe Voelker
-      %h3 Deep thoughts, distilled from an addled μ-brain
-    #footer
-      =render "_google_analytics"
+    .container-fluid
+      #sidebar.sidebar
+        %a{:href => '/'}
+          %img{:src => "/images/portrait.png"}
+        %h2 Abe Voelker
+        %h3 Deep thoughts, distilled from an addled μ-brain
+      #main
+        =find_and_preserve yield #find_and_preserve fixes 'pre' indentation issues
+      #footer
+        =render "_google_analytics"
