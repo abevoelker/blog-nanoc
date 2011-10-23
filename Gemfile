@@ -13,3 +13,5 @@ gem "adsf", "~> 1.0.1"
 gem "less", "~> 2.0.5"
 gem "rainpress", "~> 1.0"
 
+# Used for syntax highlighting (calling pygmentize)
+gem "systemu", "~> 2.4.0"

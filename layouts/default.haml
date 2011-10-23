@@ -3,11 +3,14 @@
   %head
     %meta{:charset => "utf-8"}
     %title #{@item[:title]} » Abe Voelker
-    %link{:rel => "stylesheet", :type => "text/css", :href => "/style.css", :media => "screen"}
+    %link{:rel => "stylesheet", :type => "text/css", :href => "/css/stylesheet.css", :media => "screen"}
+    %link{:rel => "stylesheet", :type => "text/css", :href => "/css/wombat.css", :media => "screen"}
+    %link{:rel => "stylesheet", :type => "text/css", :href => "http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic", :media => "screen"}
+    %link{:rel => "stylesheet", :type => "text/css", :href => "http://fonts.googleapis.com/css?family=Inconsolata", :media => "screen"}
     %meta{:name => "generator", :content => "nanoc 3.2.1"}
   %body
     #main
-      =yield
+      =find_and_preserve yield #find_and_preserve fixes 'pre' indentation issues
     #sidebar
       %a{:href => '/'}
         %img{:src => "/images/portrait.png"}

@@ -10,31 +10,29 @@
 #   item, use the pattern “/about/*/”; “/about/*” will also select the parent,
 #   because “*” matches zero or more characters.
 
-
-compile '*.less' do
-  filter :less
+compile '/static/css/*/' do
+  if @item[:extension] == 'less'
+    filter :less
+  end
+  #filter :rainpress
 end
 
-compile '/stylesheet/' do
-  filter :rainpress
-end
-
-compile '/static/*/' do
-  # don't compile
-end
+# Don't compile static files
+compile '/static/*/' do end
 
 compile '*' do
   filter :erb
+  filter :colorize_syntax,
+         :syntax => :html,
+         :default_colorizer => :pygmentize,
+         :pygmentize => { :encoding => 'utf-8' }
   layout 'default'
-end
-
-route '/stylesheet/' do
-  '/style.css'
 end
 
 route '/static/*/' do
   path = @item.identifier.chop.gsub(/^\/static/, '')
-  path + '.' + @item[:extension]
+  extension = @item[:extension] == 'less' ? 'css' : @item[:extension]
+  path + '.' + extension
 end
 
 route '*' do
