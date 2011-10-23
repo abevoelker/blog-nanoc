@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-}
-
 body {
   background: #fff;
 }
@@ -11,6 +6,14 @@ code {
   font-family: 'Consolas', 'Monaco', 'Ubuntu Mono', monospace;
   line-height: 95%;
   background-color: transparent;
+}
+
+code, pre {
+  // Fixes first line indentation weirdness from Twitter bootstrap
+  $left-indent: 6px;
+  text-indent: -$left-indent;
+  padding-right: $left-indent;
+  padding-left: $left-indent;
 }
 
 a {
