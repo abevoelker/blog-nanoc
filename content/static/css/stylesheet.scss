@@ -117,3 +117,6 @@ a:hover {
   line-height: 20px;
 }
 
+div.zebra-stripe:nth-child(odd) {
+  background-color: #eeeeee;
+}
