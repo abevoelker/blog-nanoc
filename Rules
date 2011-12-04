@@ -60,8 +60,13 @@ route '/static/*/' do
 end
 
 route '/posts/*/static/*/' do
-  path = @item.identifier.chop.gsub('/static', '')
+  path = @item.identifier.chop.gsub('/posts', '').gsub('/static', '')
   "#{path}.#{@item[:extension]}"
+end
+
+route '/posts/*/' do
+  path = @item.identifier.chop.gsub('/posts', '')
+  "#{path}/index.html"
 end
 
 route '*' do
