@@ -19,6 +19,9 @@
         .row
           .span10
             %h2 #{@item[:title]}
+            %p.published
+              Published:
+              %span.date= @item[:created_at].strftime("%B %d, %Y")
             =find_and_preserve yield #find_and_preserve fixes 'pre' indentation issues
           .span4
             .sidebar
