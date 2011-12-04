@@ -35,7 +35,7 @@ compile '/posts/*/' do
          :syntax => :html,
          :default_colorizer => :pygmentize,
          :pygmentize => { :encoding => 'utf-8' }
-  layout 'default'
+  layout 'post'
 end
 
 compile '*' do
@@ -63,4 +63,5 @@ route '*' do
 end
 
 layout '/default/', :haml, :format => :html5
+layout '/post/', :haml, :format => :html5
 layout '/_google_analytics/', :erb

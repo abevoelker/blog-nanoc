@@ -29,6 +29,11 @@ a:hover {
   color: #f90;
 }
 
+li {
+  // No idea why Twitter Bootstrap default is gray
+  color: #404040;
+}
+
 #main {
   position: absolute;
 
