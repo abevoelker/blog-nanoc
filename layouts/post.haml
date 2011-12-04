@@ -9,14 +9,21 @@
     %link{:rel => "stylesheet", :type => "text/css", :href => "http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic", :media => "screen"}
     %meta{:name => "generator", :content => "nanoc 3.2.1"}
   %body
-    .container-fluid
-      #sidebar.sidebar
-        %a{:href => '/'}
-          %img{:src => "/images/portrait.png"}
-        %h2 Abe Voelker
-        %h3 Deep thoughts, distilled from an addled μ-brain
-      #main
-        %h1 #{@item[:title]}
-        =find_and_preserve yield #find_and_preserve fixes 'pre' indentation issues
-      #footer
+    .topbar
+    .container
+      .content
+        .page-header
+          %h1
+            Abe Voelker's blog
+            %small Deep thoughts, distilled from an addled μ-brain
+        .row
+          .span10
+            %h2 #{@item[:title]}
+            =find_and_preserve yield #find_and_preserve fixes 'pre' indentation issues
+          .span4
+            .sidebar
+              %a{:href => '/'}
+                %img{:src => "/images/portrait.png"}
+              %h3 About Me
+      %footer
         =render "_google_analytics"
