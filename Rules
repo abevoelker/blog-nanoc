@@ -27,6 +27,7 @@ end
 
 # Don't compile static files
 compile '/static/*/' do end
+compile '/posts/*/static/*/' do end
 
 compile '/posts/*/' do
   filter :erb
@@ -54,8 +55,13 @@ route '/static/*/' do
     path = @item.identifier.chop.gsub(/^\/static/, '')
     path = path.gsub(/twitter-bootstrap\/bootstrap/, 'twitter-bootstrap')
     extension = @item[:extension] =~ /less|sass|scss/ ? 'css' : @item[:extension]
-    path + '.' + extension
+    "#{path}.#{extension}"
   end
+end
+
+route '/posts/*/static/*/' do
+  path = @item.identifier.chop.gsub('/static', '')
+  "#{path}.#{@item[:extension]}"
 end
 
 route '*' do
