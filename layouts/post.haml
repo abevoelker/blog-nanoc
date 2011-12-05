@@ -8,6 +8,7 @@
     %link{:rel => "stylesheet", :type => "text/css", :href => "/css/wombat.css", :media => "screen"}
     %link{:rel => "stylesheet", :type => "text/css", :href => "http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic", :media => "screen"}
     %meta{:name => "generator", :content => "nanoc 3.2.1"}
+    =render "_flattr"
   %body
     .topbar
     .container
@@ -22,6 +23,9 @@
             %p.published
               Published:
               %span.date= @item[:created_at].strftime("%B %d, %Y")
+            - if @item[:flattr_link]
+              %p.flattr
+                =flattr_large(@item[:shortlink], @item[:flattr_link])
             =find_and_preserve yield #find_and_preserve fixes 'pre' indentation issues
           .span4
             .sidebar

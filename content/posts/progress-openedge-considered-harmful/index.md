@@ -1,5 +1,6 @@
 --- 
 title: Progress OpenEdge ABL Language and DBMS Considered Harmful
+shortlink: progress-openedge-considered-harmful
 author: Abe Voelker
 created_at: 2010-08-21
 updated_at: 2010-10-02
