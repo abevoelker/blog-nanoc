@@ -8,7 +8,10 @@ published: true
 kind: article
 excerpt: "A high-level migration plan for leaving OpenEdge ABL / Progress is presented."
 flattr_link: http://flattr.com/thing/446977/Cure-for-the-Plague-A-Theoretical-Progress-OpenEdge-ABL-Migration-Plan
-thumbnail: plague_doctor.png
+thumbnail:
+  data: plague_doctor.png
+  alt: A plague doctor
+  title: A plague doctor - Doktor Schnabel von Rom (Doctor Beak of Rome) - engraving by Paul Fürst, 1656
 ---
 
 I think

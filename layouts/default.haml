@@ -21,7 +21,9 @@
           %h2= a.attributes[:title]
           %p= a.attributes[:excerpt]
           -if a.attributes[:thumbnail]
-            %img{:src => "#{a.attributes[:shortlink]}/images/#{a.attributes[:thumbnail]}"}
+            %img{:src => "#{a.attributes[:shortlink]}/images/#{a.attributes[:thumbnail][:data]}",
+                 :alt => a.attributes[:thumbnail][:alt],
+                 :title => a.attributes[:thumbnail][:title]}
           %hr
         =find_and_preserve yield #find_and_preserve fixes 'pre' indentation issues
       #footer
