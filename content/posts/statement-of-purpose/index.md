@@ -4,7 +4,6 @@ shortlink: statement-of-purpose
 kind: article
 author: Abe Voelker
 created_at: 2010-04-23
-updated_at: 2010-04-23
 published: false
 ---
 

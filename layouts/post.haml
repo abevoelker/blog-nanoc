@@ -23,6 +23,10 @@
             %p.published
               Published:
               %span.date= @item[:created_at].strftime("%B %d, %Y")
+            - if @item[:updated_at]
+              %p.updated_at
+                Updated at:
+                %span.date= @item[:updated_at].strftime("%B %d, %Y")
             - if @item[:flattr_link]
               %p.flattr
                 =flattr_large(@item[:shortlink], @item[:flattr_link])

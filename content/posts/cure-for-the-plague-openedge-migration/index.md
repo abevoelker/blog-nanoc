@@ -3,7 +3,6 @@ title: "Cure for the Plague: A Theoretical Progress OpenEdge ABL Migration Plan"
 shortlink: cure-for-the-plague-openedge-migration
 author: Abe Voelker
 created_at: 2010-11-17
-updated_at: 2010-11-17
 published: true
 kind: article
 excerpt: "A high-level migration plan for leaving OpenEdge ABL / Progress is presented."
