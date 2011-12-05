@@ -18,12 +18,14 @@
         %h3 Deep thoughts, distilled from an addled μ-brain
       #main
         - sorted_articles.each do |a|
-          %h2= a.attributes[:title]
+          %a{:href => "/#{a.attributes[:shortlink]}/"}
+            %h2= a.attributes[:title]
           %p= a.attributes[:excerpt]
           -if a.attributes[:thumbnail]
-            %img{:src => "#{a.attributes[:shortlink]}/images/#{a.attributes[:thumbnail][:data]}",
-                 :alt => a.attributes[:thumbnail][:alt],
-                 :title => a.attributes[:thumbnail][:title]}
+            %a{:href => "/#{a.attributes[:shortlink]}/"}
+              %img{:src => "#{a.attributes[:shortlink]}/images/#{a.attributes[:thumbnail][:data]}",
+                   :alt => a.attributes[:thumbnail][:alt],
+                   :title => a.attributes[:thumbnail][:title]}
           %hr
         =find_and_preserve yield #find_and_preserve fixes 'pre' indentation issues
       #footer
