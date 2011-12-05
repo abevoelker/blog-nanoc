@@ -7,6 +7,7 @@ updated_at: 2010-10-02
 published: false
 kind: article
 excerpt: Progress/OpenEdge is a terrible language for developing software.
+flattr_link: https://flattr.com/thing/447030/Progress-OpenEdge-ABL-Language-and-DBMS-Considered-Harmful
 ---
 
 I won't go into any detail about how I got the job I currently have programming
