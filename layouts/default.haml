@@ -20,6 +20,8 @@
         - sorted_articles.each do |a|
           %a{:href => "/#{a.attributes[:shortlink]}/"}
             %h2= a.attributes[:title]
+          - if a.attributes[:flattr_link]
+            =flattr_compact(a.attributes[:shortlink], a.attributes[:flattr_link])
           %p= a.attributes[:excerpt]
           -if a.attributes[:thumbnail]
             %a{:href => "/#{a.attributes[:shortlink]}/"}
