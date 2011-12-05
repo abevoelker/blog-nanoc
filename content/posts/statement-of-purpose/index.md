@@ -4,7 +4,7 @@ shortlink: statement-of-purpose
 kind: article
 author: Abe Voelker
 created_at: 2010-04-23
-published: false
+published: true
 ---
 
 <blockquote><p>...A whole bunch of people, saying a whole lot of

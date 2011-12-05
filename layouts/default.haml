@@ -17,7 +17,7 @@
         %h2 Abe Voelker
         %h3 Deep thoughts, distilled from an addled μ-brain
       #main
-        - sorted_articles.each do |a|
+        - sorted_articles.reject{|a| !a.attributes[:published]}.each do |a|
           %a{:href => "/#{a.attributes[:shortlink]}/"}
             %h2= a.attributes[:title]
           - if a.attributes[:flattr_link]
