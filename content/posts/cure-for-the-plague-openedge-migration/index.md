@@ -1,5 +1,5 @@
 ---
-title: "Cure for the Plague: A Theoretical Progress OpenEdge ABL Migration Plan"
+title: "Cure for the Plague: A Theoretical Progress / OpenEdge ABL Migration Plan"
 shortlink: cure-for-the-plague-openedge-migration
 author: Abe Voelker
 created_at: 2010-11-17

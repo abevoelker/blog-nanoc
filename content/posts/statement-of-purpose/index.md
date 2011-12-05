@@ -5,6 +5,9 @@ kind: article
 author: Abe Voelker
 created_at: 2010-04-23
 published: true
+excerpt:
+  The first post of my blog, where I quickly summarize why I finally
+  created one and lay out some general goals.
 ---
 
 <blockquote><p>...A whole bunch of people, saying a whole lot of

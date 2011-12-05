@@ -1,12 +1,15 @@
 --- 
-title: Progress OpenEdge ABL Language and DBMS Considered Harmful
+title: Progress / OpenEdge ABL Language and DBMS Considered Harmful
 shortlink: progress-openedge-considered-harmful
 author: Abe Voelker
 created_at: 2010-08-21
 updated_at: 2010-10-02
 published: true
 kind: article
-excerpt: Progress/OpenEdge is a terrible language for developing software.
+excerpt:
+  Having grown weary of the burden of having to code in it, I write a post
+  enumerating some reasons why Progress/OpenEdge is a terrible language and
+  database system for developing software.
 flattr_link: https://flattr.com/thing/447030/Progress-OpenEdge-ABL-Language-and-DBMS-Considered-Harmful
 ---
 
