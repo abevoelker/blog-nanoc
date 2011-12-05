@@ -22,12 +22,15 @@
             %h2= a.attributes[:title]
           - if a.attributes[:flattr_link]
             =flattr_compact(a.attributes[:shortlink], a.attributes[:flattr_link])
-          %p= a.attributes[:excerpt]
+          %p.published
+            Published:
+            %span.date= a.attributes[:created_at].strftime("%B %d, %Y")
           -if a.attributes[:thumbnail]
             %a{:href => "/#{a.attributes[:shortlink]}/"}
               %img{:src => "#{a.attributes[:shortlink]}/images/#{a.attributes[:thumbnail][:data]}",
                    :alt => a.attributes[:thumbnail][:alt],
                    :title => a.attributes[:thumbnail][:title]}
+          %p= a.attributes[:excerpt]
           %hr
         =find_and_preserve yield #find_and_preserve fixes 'pre' indentation issues
       #footer
