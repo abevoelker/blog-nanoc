@@ -1,9 +1,26 @@
 body {
   background: #fff;
+  font-size: 18px;
+  font-family: 'PT Serif', Georgia, Times, 'Times New Roman', serif;
+  color: #222;
+}
+
+p {
+  line-height: 27px;
+  margin-bottom: 27px;
+}
+
+h1, h2, h3 {
+  margin-bottom: 20px;
+}
+
+h1 {
+  font-weight: bold;
 }
 
 code {
   font-family: 'Consolas', 'Monaco', 'Ubuntu Mono', monospace;
+  font-size: 90%;
   line-height: 95%;
   background-color: transparent;
 }

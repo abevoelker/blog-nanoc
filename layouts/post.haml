@@ -18,7 +18,8 @@
             Abe Voelker's blog
             %small Deep thoughts, distilled from an addled μ-brain
         .row
-          .span10
+          .span1
+          .span14
             %h2 #{@item[:title]}
             %p.published
               Published:
@@ -31,11 +32,7 @@
               %p.flattr
                 =flattr_large(@item[:shortlink], @item[:flattr_link])
             =find_and_preserve yield #find_and_preserve fixes 'pre' indentation issues
-          .span4
-            .sidebar
-              %a{:href => '/'}
-                %img{:src => "/images/portrait.png"}
-              %h3 About Me
+          .span1
       %footer
         =render "_google_analytics"
         =render "_disqus_comments"
