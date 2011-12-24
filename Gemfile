@@ -1,6 +1,6 @@
 source 'http://rubygems.org'
 
-gem "thin", "~> 1.2.11" # nanoc auto/view -H thin
+gem "thin", "~> 1.3.1"
 gem "mime-types", "~> 1.16"
 
 group :development do
