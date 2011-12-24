@@ -429,7 +429,9 @@ SERVNAME = "sportssv_d"
 DBNAME   = "sports"
 
 begin
-  conn = java.sql.DriverManager.getConnection("jdbc:datadirect:openedge://" + HOSTNAME + ":-1;databaseName=" + DBNAME + ";serviceName=" + SERVNAME, USERNAME, PASSWORD)
+  conn_str = "jdbc:datadirect:openedge://" + HOSTNAME +
+             ":-1;databaseName=" + DBNAME + ";serviceName=" + SERVNAME
+  conn = java.sql.DriverManager.getConnection(conn_str, USERNAME, PASSWORD)
   stmt = conn.createStatement
   rs = stmt.executeQuery("SELECT * FROM \"SPORTS\".\"PUB\".\"customer\"")
   while (rs.next) do
