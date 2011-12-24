@@ -13,17 +13,17 @@
  */
 
 // CSS Reset
-//@import "reset.scss";
+@import "reset.scss";
 
 // Core
 @import "_variables.scss";
 @import "_mixins.scss";
 
 // Grid system and page structure
-//@import "scaffolding.scss";
+@import "scaffolding.scss";
 
 // Styled patterns and elements
-//@import "type.scss";
+@import "type.scss";
 //@import "forms.scss";
 //@import "tables.scss";
 @import "_patterns.scss";
